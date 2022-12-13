@@ -1,0 +1,245 @@
+@font-face {
+	font-family: 'Hellenica';
+  src: url('PFHellenicaSerifPro-Regular.3056c213.woff') format('woff');
+	font-display: swap;
+	font-weight: 700;
+	font-style: bold;
+}
+
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img,
+svg {
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body {
+  font-family: 'Hellenica', sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  color: #333;
+  background-color: #fff;
+  position: relative;
+  overflow-x: hidden;
+  background-image: url('bg-image.1fdd82e4.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+h1 {
+  text-align: center;
+}
+.container {
+  max-width: 1200px;
+  padding: 40px 15px;
+  margin: 0 auto;
+}
+.game {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 auto;
+  width: 730px;
+
+  -webkit-box-orient: horizontal;
+
+  -webkit-box-direction: normal;
+
+      -ms-flex-direction: row;
+
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+
+}
+.scene {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 127px;
+  height: 200px;
+  margin: 10px 10px;
+  -webkit-perspective: 600px;
+          perspective: 600px;
+}
+.card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+  border-radius: 10px;
+  font-weight: bold;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  cursor: pointer;
+}
+.card.open {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 216px;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  font-size: 100px;
+  -webkit-backface-visibility: hidden;
+  border-radius: 14px;
+  backface-visibility: hidden;
+}
+
+.card-closed {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('zus.2f888d06.jpg');
+}
+
+.card-open {
+  background-color: rgb(231, 108, 59);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+label,
+input {
+  cursor: pointer;
+}
+.time {
+  color: red;
+}
+
+.form-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+.wrapper__input-descr {
+  font-size: 3em;
+}
+
+.text {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.form-check-input:checked[type=radio] {
+  background-image: none;
+}
+
+.form-check-input:checked {
+  background-color: rgb(118, 118, 170);
+  border-color: rgb(118, 118, 170);
+}
+.form-check-input {
+  background-color: rgb(118, 118, 170);
+}
+
+@media screen and (min-width: 320px) and (max-width: 992px) {
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+ .wrapper__input-descr {
+  padding: 0 50px;
+  font-size: 2rem;
+   }
+   .form-check-label {
+    color: #fff;
+   }
+   .text {
+    font-size: 1rem;
+    color: #fff;
+   }
+}
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+  .form-input {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+
+  }
+  .wrapper__input-descr {
+    padding: unset;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .game {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: unset;
+    width: unset;
+  }
+  .scene {
+    min-width: 70px;
+    min-height: 150px;
+    margin: 5px;
+  }
+}
+
+
+/*# sourceMappingURL=style.8acb7da0.css.map */
